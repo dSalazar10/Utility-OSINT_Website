@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Table - SocialMediaRecon</title>
+    <meta name="description" content="A custom tool to be used in conjunction with Hunchly.">
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css?h=5104ad3282bc01a42964e7289e0ce465">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="/assets/fonts/fontawesome-all.min.css?h=431006b7798dde30d7728c5df9bb0948">
+</head>
+
+<body id="page-top">
+    <div id="wrapper">
+        <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0">
+            <div class="container-fluid d-flex flex-column p-0">
+                <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
+                    <div class="sidebar-brand-icon rotate-n-15"><i class="fas fa-laugh-wink"></i></div>
+                    <div class="sidebar-brand-text mx-3"><span>Social Media<br>&nbsp;recon</span></div>
+                </a>
+                <hr class="sidebar-divider my-0">
+                <ul class="nav navbar-nav text-light" id="accordionSidebar">
+                    <li class="nav-item"><a class="nav-link" href="/index.html"><i class="fas fa-tachometer-alt"></i><span>Profile</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="/email.html"><i class="fas fa-mail-bulk"></i><span>Email</span></a><a class="nav-link" href="/facebook.html"><i class="fab fa-facebook-f"></i><span>Facebook</span></a><a class="nav-link active" href="/instagram.html"><i class="fab fa-instagram"></i><span>Instagram</span></a>
+                        <a
+                            class="nav-link" href="/linkedin.html"><i class="fab fa-linkedin-in"></i><span>LinkedIn</span></a><a class="nav-link" href="/name.html"><i class="fas fa-superscript"></i><span>Name</span></a><a class="nav-link" href="/search.html"><i class="fas fa-search"></i><span>Search</span></a>
+                            <a
+                                class="nav-link" href="/twitter.html"><i class="fab fa-twitter"></i><span>Twitter</span></a><a class="nav-link" href="/username.html"><i class="far fa-user"></i><span>Username</span></a><a class="nav-link" href="/videos.html"><i class="fas fa-video"></i><span>Videos</span></a></li>
+                    <li
+                        class="nav-item"></li>
+                        <li class="nav-item"></li>
+                </ul>
+                <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
+            </div>
+        </nav>
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
+                    <div class="container-fluid"><button class="btn btn-link d-md-none rounded-circle mr-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button></div>
+                </nav>
+                <div class="container-fluid">
+                    <h3 class="text-dark mb-4">Instagram</h3>
+                </div><form onsubmit="doPopAll(this.PopAll.value); return false;">
+<input type="text" id="PopAll" name="PopAll" size="30" placeholder="Username"/>
+<input type="submit" style="width:120px" value="Populate All" /><br /></form><br>
+
+<form onsubmit="doSearch01(this.Search01.value); return false;">
+<input type="text" id="Search01" name="Search01" size="30" placeholder="Username"/>
+<input type="submit" style="width:120px" value="IG Profile" /><br /></form>
+
+<form onsubmit="doSearch02(this.Search02.value); return false;">
+<input type="text" id="Search02" name="Search02" size="30" placeholder="Username" value="" />
+<input type="submit" style="width:120px" value="Profile Summary" /><br /></form>
+
+<form onsubmit="doSearch03(this.Search03.value); return false;">
+<input type="text" id="Search03" name="Search03" size="30" placeholder="Username" value="" />
+<input type="submit" style="width:120px" value="Friends" /><br /></form>
+
+<form onsubmit="doSearch04(this.Search04.value); return false;">
+<input type="text" id="Search04" name="Search04" size="30" placeholder="Username" value="" />
+<input type="submit" style="width:120px" value="Followers" /><br /></form>
+
+<form onsubmit="doSearch05(this.Search05.value); return false;">
+<input type="text" id="Search05" name="Search05" size="30" placeholder="Username" value="" />
+<input type="submit" style="width:120px" value="Twitter Posts" /><br /></form>
+
+<form onsubmit="doSearch11(this.Search11.value); return false;">
+<input type="text" id="Search11" name="Search11" size="30" placeholder="Username" value="" />
+<input type="submit" style="width:120px" value="Partial User" /><br /></form>
+
+<form onsubmit="doSearch12(this.Search12.value); return false;">
+<input type="text" id="Search12" name="Search12" size="30" placeholder="Username" value="" />
+<input type="submit" style="width:120px" value="StoriesIG" /><br /></form>
+
+<form onsubmit="doSearch13(this.Search13.value); return false;">
+<input type="text" id="Search13" name="Search13" size="30" placeholder="Username" value="" />
+<input type="submit" style="width:120px" value="Stories Profile" /><br /></form>
+
+<br>
+
+<form onsubmit="doall(this.all.value); return false;">
+<input type="text" name="all" size="30" placeholder="Search Terms" value="" />
+<input type="submit" style="width:120px" value="Submit All" />
+</form>
+<br>
+
+<form onsubmit="doSearch06(this.Search06.value,this.Search06b.value); return false;">
+<input type="text" id="Search06" name="Search06" size="15" placeholder="Username" value="" />
+<input type="text" name="Search06b" size="15" placeholder="Search Terms" value="" />
+<input type="submit" style="width:120px" value="User + Term" /><br /></form>
+
+<form onsubmit="doSearch07(this.Search07.value,this.Search07b.value); return false;">
+<input type="text" id="Search07" name="Search07" size="15" placeholder="Username" value="" />
+<input type="text" name="Search07b" size="15" placeholder="Username" value="" />
+<input type="submit" style="width:120px" value="Associations" /><br /></form>
+<br>
+
+<form onsubmit="doSearch08(this.Search08.value); return false;">
+<input type="text" name="Search08" size="30" placeholder="Search Terms" value="" />
+<input type="submit" style="width:120px" value="IG Hashtags" /><br /></form>
+
+<form onsubmit="doSearch09(this.Search09.value); return false;">
+<input type="text" name="Search09" size="30" placeholder="Search Terms" value="" />
+<input type="submit" style="width:120px" value="IG Terms" /><br /></form>
+
+<form onsubmit="doSearch10(this.Search10.value); return false;">
+<input type="text" name="Search10" size="30" placeholder="Search Terms" value="" />
+<input type="submit" style="width:120px" value="SearchMyBio" /><br /></form>
+
+<form onsubmit="doSearch14(this.Search14.value); return false;">
+<input type="text" name="Search14" size="30" placeholder="Search Terms" value="" />
+<input type="submit" style="width:120px" value="Partial Tag" /><br /></form></div>
+            <footer class="bg-white sticky-footer"></footer>
+        </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a></div>
+    <script src="/assets/js/jquery.min.js?h=89312d34339dcd686309fe284b3f226f"></script>
+    <script src="/assets/bootstrap/js/bootstrap.min.js?h=0168f7c1e0d08faa2f4b13f4a1dc8c98"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+    <script src="/assets/js/script.min.js?h=14e22618a0d7d2395c2feb563440a295"></script>
+</body>
+
+</html>
